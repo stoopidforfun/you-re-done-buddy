@@ -1,0 +1,30 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('PAAAAUUUUUUUUUULLLLLLLLLL WAAAAAAAALLLLLLLLLLL.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+audio {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
