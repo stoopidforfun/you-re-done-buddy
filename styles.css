@@ -1,3 +1,5 @@
+/* styles.css */
+
 body {
     margin: 0;
     padding: 0;
@@ -18,7 +20,19 @@ body {
 }
 
 audio {
+    display: none; /* Hides the default audio controls */
+}
+
+#playButton {
     position: absolute;
-    bottom: 0;
-    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
 }
