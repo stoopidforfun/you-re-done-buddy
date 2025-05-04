@@ -9,7 +9,7 @@
 <body>
     <div class="background"></div>
 
-    <button id="playButton">🔊 Play Sound</button>
+    <button id="playButton" style="display: none;">🔊 Play Sound</button>
 
     <audio id="bgAudio" loop>
         <source src="AUGHHMeme Sound Effect.mp3" type="audio/mp3">
@@ -20,10 +20,21 @@
         const playButton = document.getElementById('playButton');
         const audio = document.getElementById('bgAudio');
 
-        playButton.addEventListener('click', () => {
-            audio.play();
-            playButton.style.display = 'none';
-        });
+     
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            playButton.style.display = 'block';
+            playButton.addEventListener('click', () => {
+                audio.play();
+                playButton.style.display = 'none';
+            });
+        } else {
+            // Play immediately on non-mobile
+            audio.play().catch(e => {
+                console.warn("Autoplay might be blocked on desktop too:", e);
+            });
+        }
     </script>
 </body>
 </html>
