@@ -8,9 +8,22 @@
 </head>
 <body>
     <div class="background"></div>
-    <audio autoplay loop>
+
+    <button id="playButton">🔊 Play Sound</button>
+
+    <audio id="bgAudio" loop>
         <source src="AUGHHMeme Sound Effect.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
+
+    <script>
+        const playButton = document.getElementById('playButton');
+        const audio = document.getElementById('bgAudio');
+
+        playButton.addEventListener('click', () => {
+            audio.play();
+            playButton.style.display = 'none';
+        });
+    </script>
 </body>
 </html>
